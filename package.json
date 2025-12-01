@@ -1,6 +1,11 @@
 {
+  "name": "gacha",
+  "version": "1.0.0",
+  "main": "websocket.js",
+  "scripts": {
+    "start": "node websocket.js"
+  },
   "dependencies": {
-    "boxicons": "^2.1.4",
     "ws": "^8.18.3"
   }
 }
