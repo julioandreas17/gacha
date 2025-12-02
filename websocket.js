@@ -4,11 +4,29 @@ var set_id = 1;
 var limit_players = 5;
 var package = {};
 var players = {};
-var PORT = process.env.PORT || 3000;
+var PORT = 8000;
+
+// var ws = new WebSocket.Server({
+//   port: PORT,
+//   perMessageDeflate: {
+//     zlibDeflateOptions: {
+//       chunkSize: 1024,
+//       memLevel: 7,
+//       level: 3
+//     },
+//     zlibInflateOptions: {
+//       chunkSize: 10 * 1024
+//     },
+//     clientNoContextTakeover: true,
+//     serverNoContextTakeover: true,
+//     serverMaxWindowBits: 10,
+//     concurrencyLimit: 10,
+//     threshold: 1024
+//   }
+// });
 
 var ws = new WebSocket.Server({
   port: PORT,
-  host: "0.0.0.0",
   perMessageDeflate: false,
 });
 
